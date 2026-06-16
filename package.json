@@ -1,0 +1,19 @@
+{
+    "devDependencies": {
+        "@eslint/js": "^9.37.0",
+        "eslint": "^9.37.0",
+        "fs-extra": "^11.3.2",
+        "globals": "^16.4.0",
+        "htmlhint": "^1.7.1",
+        "http-server": "^14.1.1",
+        "madge": "^8.0.0",
+        "stylelint": "^16.25.0",
+        "stylelint-config-recommended": "^17.0.0"
+    },
+    "scripts": {
+        "lint:js": "eslint js",
+        "lint:css": "stylelint css",
+        "lint:html": "htmlhint **/*.html",
+        "dev": "npx http-server . -p 8080 --cors -o"
+    }
+}

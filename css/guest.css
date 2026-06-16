@@ -270,6 +270,7 @@ svg {
     border-radius: 1.25rem;
     padding-top: 2rem !important;
     padding-bottom: 0 !important;
+    clip-path: inset(-100% 0 -100% 0);
 }
 
 .gallery-carousel-inner {

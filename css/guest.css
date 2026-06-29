@@ -964,10 +964,13 @@ html[data-bs-theme="light"] #quran-section {
 html[data-bs-theme="light"] #love-story {
     padding-top: 1.25rem !important;
 }
-html[data-bs-theme="light"] .quran-divider-top,
-html[data-bs-theme="light"] .quran-divider-bottom {
+html[data-bs-theme="light"] .quran-divider-top {
     margin-top: 1rem !important;
     margin-bottom: 1rem !important;
+}
+.quran-divider-bottom-wrapper {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 /* 2. Happy Moment section adjustments */
@@ -1022,10 +1025,13 @@ html[data-bs-theme="dark"] .heart-divider-only-light {
     html[data-bs-theme="light"] #love-story {
         padding-top: 1rem !important;
     }
-    html[data-bs-theme="light"] .quran-divider-top,
-    html[data-bs-theme="light"] .quran-divider-bottom {
+    html[data-bs-theme="light"] .quran-divider-top {
         margin-top: 0.75rem !important;
         margin-bottom: 0.75rem !important;
+    }
+    .quran-divider-bottom-wrapper {
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
     }
     html[data-bs-theme="light"] #wedding-date {
         padding-bottom: 0px !important;

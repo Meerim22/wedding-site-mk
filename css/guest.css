@@ -112,7 +112,7 @@ html[data-bs-theme="dark"] .timeline-line {
 }
 
 .font-esthetic {
-    font-family: 'Marck Script', cursive !important;
+    font-family: 'Playfair Display', serif !important;
 }
 
 .font-arabic {
@@ -372,13 +372,13 @@ svg {
 
 /* Light Theme Variables */
 html[data-bs-theme="light"] {
-    --bs-body-bg: #edf5ff !important;
-    --bs-body-color: #0f2b5c !important;
-    --bs-light-rgb: 237, 245, 255 !important;
-    --bs-dark-rgb: 15, 43, 92 !important;
-    --bs-primary: #1a56db !important;
-    --bs-primary-rgb: 26, 86, 219 !important;
-    --bs-border-color: #c3ddfd !important;
+    --bs-body-bg: #ffffff;
+    --bs-body-color: #4a657a;
+    --bs-light-rgb: 255, 255, 255;
+    --bs-dark-rgb: 74, 101, 122;
+    --bs-primary: #c19b6c;
+    --bs-primary-rgb: 193, 155, 108;
+    --bs-border-color: #b0c4de;
 }
 
 /* Dark Theme Variables */
@@ -397,13 +397,13 @@ html[data-bs-theme="dark"] .text-theme-auto {
     color: #e0eeff !important;
 }
 html[data-bs-theme="light"] .text-theme-auto {
-    color: #0f2b5c !important;
+    color: #4a657a !important;
 }
 
 /* Background utilities overrides */
 html[data-bs-theme="light"] .bg-light-dark {
-    background-color: #e0edff !important;
-    color: #0f2b5c !important;
+    background-color: #ffffff;
+    color: #4a657a;
 }
 html[data-bs-theme="dark"] .bg-light-dark {
     background-color: #0f1c3f !important;
@@ -411,15 +411,15 @@ html[data-bs-theme="dark"] .bg-light-dark {
 }
 
 html[data-bs-theme="light"] .bg-white-black {
-    background-color: #ffffff !important;
+    background-color: #ffffff;
 }
 html[data-bs-theme="dark"] .bg-white-black {
     background-color: #060b18 !important;
 }
 
 html[data-bs-theme="light"] .bg-theme-auto {
-    background-color: #ffffff !important;
-    color: #0f2b5c !important;
+    background-color: #ffffff;
+    color: #4a657a;
 }
 html[data-bs-theme="dark"] .bg-theme-auto {
     background-color: #162854 !important;
@@ -427,16 +427,15 @@ html[data-bs-theme="dark"] .bg-theme-auto {
 }
 
 html[data-bs-theme="light"] .bg-overlay-auto {
-    background-color: rgba(255, 255, 255, 0.65) !important;
+    background-color: rgba(255, 255, 255, 0.65);
 }
 html[data-bs-theme="dark"] .bg-overlay-auto {
     background-color: rgba(10, 17, 40, 0.65) !important;
 }
 
-/* SVG separator colors */
-html[data-bs-theme="light"] .color-theme-svg {
-    color: #ffffff !important;
-    background-color: #e0edff !important;
+/* Hide heavy SVG waves in light theme to maintain a clean, invitation-style look */
+html[data-bs-theme="light"] .svg-wrapper {
+    display: none !important;
 }
 html[data-bs-theme="dark"] .color-theme-svg {
     color: #060b18 !important;
@@ -468,19 +467,19 @@ html[data-bs-theme="dark"] .btn-outline-auto {
 }
 
 .welcome-bg {
-    background: #f9fcff !important; /* Even lighter soft pastel blue */
-    color: #0f2b5c !important;
+    background: #ffffff !important;
+    color: #4a657a !important;
 }
 
 .welcome-bg h2,
 .welcome-bg #guest-name {
-    color: #0f2b5c !important;
+    color: #4a657a !important;
 }
 
 .welcome-bg .welcome-icon {
     display: inline-block !important;
     font-size: 2.5rem !important; /* Smaller icon size */
-    color: #0f2b5c !important; /* Same as the upper text color */
+    color: #4a657a !important; /* Same as the upper text color */
     text-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     margin-top: 0.75rem !important;
     margin-bottom: 0.75rem !important;
@@ -510,13 +509,13 @@ html[data-bs-theme="dark"] .btn-outline-auto {
 html[data-bs-theme="light"] .form-control,
 html[data-bs-theme="light"] .form-select {
     background-color: #ffffff !important;
-    border-color: #a4cafe !important;
-    color: #0f2b5c !important;
+    border-color: #b0c4de !important;
+    color: #4a657a !important;
 }
 html[data-bs-theme="light"] .form-control:focus,
 html[data-bs-theme="light"] .form-select:focus {
-    border-color: #1a56db !important;
-    box-shadow: 0 0 0 0.25rem rgba(26, 86, 219, 0.25) !important;
+    border-color: #c19b6c !important;
+    box-shadow: 0 0 0 0.25rem rgba(193, 155, 108, 0.25) !important;
 }
 html[data-bs-theme="dark"] .form-control,
 html[data-bs-theme="dark"] .form-select {
@@ -784,8 +783,284 @@ html[data-bs-theme="dark"] .pagination .page-link {
     transition: all 0.3s ease;
 }
 
-html[data-bs-theme="dark"] .pagination .page-item:not(.disabled) .page-link:hover {
+html[data-bs-theme=\"dark\"] .pagination .page-item:not(.disabled) .page-link:hover {
     background-color: #3f83f8 !important;
+    color: #ffffff !important;
+}
+
+/* =============================================================
+   INVITATION DESIGN — Light Theme Only
+   Clean, minimal, no messy gradients
+   ============================================================= */
+
+/* Section backgrounds: pure white everywhere for clean look */
+html[data-bs-theme="light"] section.bg-light-dark {
+    background-color: #ffffff;
+}
+html[data-bs-theme="light"] section.bg-white-black {
+    background-color: #ffffff;
+}
+
+/* Cards inside sections get a subtle shadow and border */
+html[data-bs-theme="light"] .bg-theme-auto {
+    background-color: #ffffff;
+    border: 1px solid #e0ecf8;
+    box-shadow: 0 4px 20px rgba(100, 160, 210, 0.08);
+}
+
+/* Gallery card border */
+html[data-bs-theme="light"] #gallery .border {
+    border-color: #c8ddf0 !important;
+    background-color: #ffffff;
+}
+
+/* ---- Heart divider — larger and clearly visible (Gold) ---- */
+.heart-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem auto;
+    width: 90%;
+    max-width: 400px;
+}
+
+.heart-divider::before,
+.heart-divider::after {
+    content: "";
+    flex: 1;
+    height: 1.5px;
+    background-color: #c19b6c;
+    opacity: 0.8;
+}
+
+.heart-divider span {
+    font-size: 1.5rem;
+    padding: 0 1rem;
+    color: #c19b6c;
+    line-height: 1;
+}
+
+/* Dark theme: hide heart divider (or style it differently) */
+html[data-bs-theme="dark"] .heart-divider::before,
+html[data-bs-theme="dark"] .heart-divider::after {
+    background-color: #3f83f8;
+    opacity: 0.4;
+}
+html[data-bs-theme="dark"] .heart-divider span {
+    color: #3f83f8;
+}
+
+/* ---- Photo ring — gold in light mode ---- */
+html[data-bs-theme="light"] .img-center-crop.rounded-circle {
+    border-color: #c19b6c !important;
+    box-shadow: 0 0 0 4px rgba(193, 155, 108, 0.18), 0 6px 20px rgba(74, 101, 122, 0.15) !important;
+}
+
+/* ---- HR inside sections — elegant gold gradient ---- */
+html[data-bs-theme="light"] section hr {
+    border: none !important;
+    height: 1.5px !important;
+    background: linear-gradient(to right, transparent, #c19b6c 50%, transparent) !important;
+    opacity: 0.6 !important;
+    margin: 2rem auto !important;
+    width: 75% !important;
+}
+
+/* ---- Headings ---- */
+html[data-bs-theme="light"] .font-esthetic {
+    color: #4a657a;
+}
+
+/* ---- Buttons ---- */
+html[data-bs-theme="light"] .btn-calendar-subtle {
+    background-color: #ffffff !important;
+    border: 1px solid #7aafd4 !important;
+    color: #4a657a !important;
+    box-shadow: 0 2px 8px rgba(100, 160, 210, 0.15) !important;
+}
+html[data-bs-theme="light"] .btn-calendar-subtle:hover {
+    background-color: #4a657a !important;
+    color: #ffffff !important;
+    border-color: #4a657a !important;
+}
+
+html[data-bs-theme="light"] .btn-wish {
+    background-color: #ffffff !important;
+    border: 1px solid #7aafd4 !important;
+    color: #4a657a !important;
+}
+html[data-bs-theme="light"] .btn-wish:hover {
+    background-color: #4a657a !important;
+    color: #ffffff !important;
+    border-color: #4a657a !important;
+}
+
+/* ---- Inputs ---- */
+html[data-bs-theme="light"] .input-wish {
+    border: 1px solid #c19b6c !important;
+    background-color: #ffffff !important;
+    color: #4a657a !important;
+}
+html[data-bs-theme="light"] .input-wish:focus {
+    border-color: #c19b6c !important;
+    box-shadow: 0 0 0 0.2rem rgba(193, 155, 108, 0.2) !important;
+}
+
+/* ---- Navbar ---- */
+html[data-bs-theme="light"] .navbar {
+    background-color: rgba(255, 255, 255, 0.92) !important;
+    border-color: #c8ddf0 !important;
+}
+
+/* ---- Welcome page button (Reverted to original) ---- */
+html[data-bs-theme="light"] .btn-special {
+    background-color: #ffffff !important;
+    color: #4a657a !important;
+    border: 1.5px solid #7aafd4 !important;
+    box-shadow: 0 4px 16px rgba(100, 160, 210, 0.2) !important;
+}
+html[data-bs-theme="light"] .btn-special:hover,
+html[data-bs-theme="light"] .btn-special:focus {
+    background-color: #4a657a !important;
+    color: #ffffff !important;
+    border-color: #4a657a !important;
+}
+
+/* ---- Love Story Button (Gold) ---- */
+html[data-bs-theme="light"] .btn-story-gold {
+    background-color: #c19b6c !important;
+    color: #ffffff !important;
+    border: 1.5px solid #c19b6c !important;
+    box-shadow: 0 4px 16px rgba(193, 155, 108, 0.25) !important;
+    transition: all 0.3s ease !important;
+}
+html[data-bs-theme="light"] .btn-story-gold:hover,
+html[data-bs-theme="light"] .btn-story-gold:focus {
+    background-color: #b0895c !important;
+    color: #ffffff !important;
+    border-color: #b0895c !important;
+    box-shadow: 0 4px 20px rgba(193, 155, 108, 0.4) !important;
+}
+
+/* ---- Love Story Heart Icon (Gold) ---- */
+html[data-bs-theme="light"] .heart-story-gold {
+    color: #c19b6c !important;
+}
+
+/* ---- Uniform Section Spacings (Desktop) ---- */
+html[data-bs-theme="light"] main > section:not(#home) {
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
+}
+
+/* 1. Quran section equal spacing & equal distance to Love Story */
+html[data-bs-theme="light"] #bride {
+    padding-bottom: 1rem !important;
+}
+html[data-bs-theme="light"] #quran-section {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+}
+html[data-bs-theme="light"] #love-story {
+    padding-top: 1.25rem !important;
+}
+html[data-bs-theme="light"] .quran-divider-top,
+html[data-bs-theme="light"] .quran-divider-bottom {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+}
+
+/* 2. Happy Moment section adjustments */
+html[data-bs-theme="light"] #wedding-date .heart-divider {
+    margin-top: 0.5rem !important;
+    margin-bottom: 1rem !important;
+}
+
+/* 3. Merge Wedding Date and Gallery (almost 0 spacing) */
+html[data-bs-theme="light"] #wedding-date {
+    padding-bottom: 0px !important;
+    margin-bottom: 0px !important;
+}
+html[data-bs-theme="light"] #gallery {
+    padding-top: 0px !important;
+    margin-top: 0px !important;
+    padding-bottom: 3.5rem !important; /* Increased spacing to #comment */
+}
+
+/* 4. Spacing after Wishes section to final divider */
+html[data-bs-theme="light"] #comment {
+    padding-top: 3.5rem !important; /* Increased spacing from #gallery */
+    padding-bottom: 1rem !important;
+}
+html[data-bs-theme="light"] #end-section {
+    padding-top: 0.5rem !important;
+    padding-bottom: 5.5rem !important;
+}
+html[data-bs-theme="light"] #end-section .heart-divider {
+    margin-top: 0.5rem !important;
+    margin-bottom: 1rem !important;
+}
+
+/* Hide the new light-only divider in dark mode */
+html[data-bs-theme="dark"] .heart-divider-only-light {
+    display: none !important;
+}
+
+/* ---- Mobile Responsiveness for Spacings ---- */
+@media (max-width: 768px) {
+    html[data-bs-theme="light"] main > section:not(#home) {
+        padding-top: 1.5rem !important;
+        padding-bottom: 1.5rem !important;
+    }
+    html[data-bs-theme="light"] #bride {
+        padding-bottom: 0.75rem !important;
+    }
+    html[data-bs-theme="light"] #quran-section {
+        padding-top: 0.75rem !important;
+        padding-bottom: 0.75rem !important;
+    }
+    html[data-bs-theme="light"] #love-story {
+        padding-top: 1rem !important;
+    }
+    html[data-bs-theme="light"] .quran-divider-top,
+    html[data-bs-theme="light"] .quran-divider-bottom {
+        margin-top: 0.75rem !important;
+        margin-bottom: 0.75rem !important;
+    }
+    html[data-bs-theme="light"] #wedding-date {
+        padding-bottom: 0px !important;
+        margin-bottom: 0px !important;
+    }
+    html[data-bs-theme="light"] #gallery {
+        padding-top: 0px !important;
+        margin-top: 0px !important;
+        padding-bottom: 2.5rem !important; /* Increased on mobile */
+    }
+    html[data-bs-theme="light"] #comment {
+        padding-top: 2.5rem !important; /* Increased on mobile */
+        padding-bottom: 0.75rem !important;
+    }
+    html[data-bs-theme="light"] #end-section {
+        padding-top: 0.25rem !important;
+        padding-bottom: 4.5rem !important;
+    }
+    html[data-bs-theme="light"] #end-section .heart-divider {
+        margin-top: 0.25rem !important;
+        margin-bottom: 0.75rem !important;
+    }
+    .heart-divider {
+        margin: 0.75rem auto !important;
+    }
+}
+
+/* ---- Pagination ---- */
+html[data-bs-theme="light"] .pagination .page-link {
+    background-color: #ffffff !important;
+    border-color: #7aafd4 !important;
+    color: #4a657a !important;
+}
+html[data-bs-theme="light"] .pagination .page-item:not(.disabled) .page-link:hover {
+    background-color: #4a657a !important;
     color: #ffffff !important;
 }
 

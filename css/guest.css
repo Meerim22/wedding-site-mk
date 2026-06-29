@@ -856,6 +856,11 @@ html[data-bs-theme="light"] .img-center-crop.rounded-circle {
     box-shadow: 0 0 0 4px rgba(193, 155, 108, 0.18), 0 6px 20px rgba(74, 101, 122, 0.15) !important;
 }
 
+html[data-bs-theme="light"] .img-center-crop.rounded-circle-1 {
+    border-color: #b0c4de !important;
+    box-shadow: 0 0 0 4px rgba(176, 196, 222, 0.3), 0 6px 20px rgba(74, 101, 122, 0.15) !important;
+}
+
 /* ---- HR inside sections — elegant gold gradient ---- */
 html[data-bs-theme="light"] section hr {
     border: none !important;

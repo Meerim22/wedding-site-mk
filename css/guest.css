@@ -986,13 +986,13 @@ html[data-bs-theme="light"] #wedding-date {
 }
 html[data-bs-theme="light"] #gallery {
     padding-top: 0px !important;
-    margin-top: 0px !important;
-    padding-bottom: 3.5rem !important; /* Increased spacing to #comment */
+    margin-top: -1.5rem !important; /* Pull up closer */
+    padding-bottom: 5.5rem !important; /* Heavily increased spacing to #comment */
 }
 
 /* 4. Spacing after Wishes section to final divider */
 html[data-bs-theme="light"] #comment {
-    padding-top: 3.5rem !important; /* Increased spacing from #gallery */
+    padding-top: 5.5rem !important; /* Heavily increased spacing from #gallery */
     padding-bottom: 1rem !important;
 }
 html[data-bs-theme="light"] #end-section {
@@ -1039,11 +1039,11 @@ html[data-bs-theme="dark"] .heart-divider-only-light {
     }
     html[data-bs-theme="light"] #gallery {
         padding-top: 0px !important;
-        margin-top: 0px !important;
-        padding-bottom: 2.5rem !important; /* Increased on mobile */
+        margin-top: -1.5rem !important; /* Pull up closer on mobile */
+        padding-bottom: 5rem !important; /* Heavily increased on mobile */
     }
     html[data-bs-theme="light"] #comment {
-        padding-top: 2.5rem !important; /* Increased on mobile */
+        padding-top: 5rem !important; /* Heavily increased on mobile */
         padding-bottom: 0.75rem !important;
     }
     html[data-bs-theme="light"] #end-section {

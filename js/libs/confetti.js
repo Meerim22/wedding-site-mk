@@ -16,8 +16,11 @@ const heartShape = () => {
 export const basicAnimation = () => {
     if (window.confetti) {
         window.confetti({
-            origin: { y: 1 },
-            zIndex: zIndex
+            origin: { x: 0.5, y: 0.5 },
+            particleCount: 100,
+            spread: 70,
+            zIndex: zIndex,
+            colors: ['#c19b6c', '#e0eeff', '#3b82f6']
         });
     }
 };
@@ -35,7 +38,7 @@ export const openAnimation = (until = 15) => {
     const animationEnd = Date.now() + duration;
 
     const heart = heartShape();
-    const colors = ['#FFC0CB', '#FF1493', '#C71585'];
+    const colors = ['#c19b6c', '#e0eeff', '#3b82f6'];
 
     const randomInRange = (min, max) => {
         return Math.random() * (max - min) + min;
@@ -85,7 +88,7 @@ export const tapTapAnimation = (div, duration = 50) => {
     const yPosition = Math.max(0.3, Math.min(1, (domRec.top / window.innerHeight) + 0.2));
 
     const heart = heartShape();
-    const colors = ['#FF69B4', '#FF1493'];
+    const colors = ['#c19b6c', '#e0eeff', '#3b82f6'];
 
     const frame = () => {
         colors.forEach((color) => {

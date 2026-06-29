@@ -166,7 +166,7 @@ export const guest = (() => {
         theme.spyTop();
 
         confetti.basicAnimation();
-        util.timeOut(confetti.openAnimation, 1500);
+        util.timeOut(() => confetti.openAnimation(30), 100);
 
         document.dispatchEvent(new Event('undangan.open'));
         util.changeOpacity(document.getElementById('welcome'), false).then((el) => el.remove());
